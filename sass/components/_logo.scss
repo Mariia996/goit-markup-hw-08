@@ -1,0 +1,26 @@
+.logo {
+  color: #2196f3;
+  text-decoration: none;
+
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+
+  &.logo-for-header {
+    margin-right: 93px;
+  }
+
+  &-header {
+    color: #212121;
+  }
+
+  &.logo-for-footer {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &-footer {
+    color: #ffffff;
+  }
+}

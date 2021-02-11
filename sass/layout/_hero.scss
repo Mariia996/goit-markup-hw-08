@@ -1,0 +1,21 @@
+.hero {
+  text-align: center;
+
+  border-color: var(--secondary-bg-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero.jpg);
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &-title {
+    color: #ffffff;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+  }
+}
