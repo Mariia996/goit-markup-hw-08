@@ -1,17 +1,33 @@
 .header-page {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #ececec;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ececec;
+  }
 }
 
 .nav-container {
-  display: flex;
-  align-items: center;
-
-  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
 }
 
-
+.container.header-container {
+  display: flex;
+  align-items: center;
+  // !
+  justify-content: space-between;
+}
 
 .link.current {
   position: relative;
@@ -68,4 +84,84 @@
   width: 16px;
   height: 16px;
   margin-right: 10px;
+}
+
+.burger-btn-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.burger-btn {
+  border: none;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav {
+    display: none;
+  }
+
+  .site-contacts {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+}
+
+// MOBILE-MENU
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  max-width: 480px;
+  height: 796vh;
+  background-color: var(--primary-white-color);
+  padding: 48px 40px;
+  overflow: scroll;
+
+  font-size: 40px;
+  line-height: 1.175;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  transform: translateX(-50%);
+}
+
+.mobile-menu-nav-list:first-child {
+  margin-bottom: 36px;
+}
+
+.mobile-menu-nav-list:nth-child(2) {
+  margin-bottom: 32px;
+}
+
+.mobile-nav-link {
+  color: var(--title-text-color);
+  &.current-mobile-link {
+    color: var(--accent-color);
+  }
+}
+
+.mobile-menu-tel-link {
+  font-size: 34px;
+  line-height: 1.176;
+  color: var(--accent-color);
+}
+
+.mobile-menu-mail-link {
+  font-size: 24px;
+  line-height: 1.167;
+  color: var(--text-main-color);
+}
+
+.mobile-menu-social-link {
+  font-size: 18px;
+  line-height: 1.222;
+  color: var(--accent-color);
 }

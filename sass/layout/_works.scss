@@ -14,9 +14,6 @@
 
 .work-list-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
 
   &::before {
     content: '';
@@ -32,7 +29,8 @@
 .work-description {
   position: absolute;
   bottom: 27px;
-
+  width: 100%;
+  text-align: center;
   text-transform: uppercase;
   font-weight: 700;
   color: var(--primary-white-color);

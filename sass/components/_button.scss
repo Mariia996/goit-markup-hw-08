@@ -26,9 +26,6 @@
 .main-button.send-btn {
   padding-right: 28px;
   padding-left: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   &::after {
     content: '';
@@ -36,10 +33,18 @@
     width: 24px;
     height: 24px;
     margin-left: 10px;
+    vertical-align: top;
 
     background-image: url(../img/icons/send.svg);
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-top: 20px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 

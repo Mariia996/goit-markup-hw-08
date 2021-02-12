@@ -1,29 +1,81 @@
 .footer-page {
+  max-width: 480px;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--secondary-bg-color);
+
+  @media screen and (max-width: 1199px) {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 100%;
+  }
+}
+
+.container.all-footer {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
 }
 
 .footer-container {
-  width: 270px;
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: 50%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((50% - 45px) / 2);
+  }
 
   &.mailing-container {
-    width: 570px;
+    @media screen and (max-width: 1199px) {
+      flex-basis: 100%;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-top: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(50% - 15px);
+    }
   }
 
   & .text {
     margin-bottom: 20px;
     color: var(--primary-white-color);
   }
+
+  &:not(:last-child) {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .join {
   text-transform: uppercase;
-}
-
-.address-container {
-  display: flex;
-  align-items: center;
 }
 
 .address-list {
@@ -61,19 +113,20 @@
 }
 
 .form-mailing {
-  display: flex;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .form-field-mailing {
-  display: block;
+  // !
+  width: 100%;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   outline: none;
 
-  flex-grow: 1;
   padding: 16px 16px;
-  margin-right: 12px;
 
   font-size: 16px;
   line-height: 1.25;
@@ -83,6 +136,15 @@
 
   &:focus {
     border-color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+    max-width: 358px;
   }
 }
 

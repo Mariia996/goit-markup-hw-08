@@ -4,11 +4,17 @@
 
   font-family: Raleway;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.167;
 
   &.logo-for-header {
-    margin-right: 93px;
+    @media screen and (max-width: 767px) {
+      margin-right: 88px;
+    }
+
+    @media screen and (max-width: 1199px) {
+      margin-right: 93px;
+    }
   }
 
   &-header {
@@ -22,5 +28,10 @@
 
   &-footer {
     color: #ffffff;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.192;
   }
 }
