@@ -50,7 +50,7 @@
     max-width: 768px;
 
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../../img/hero/hero_bg-tablet.jpg);
+      url(.././img/hero/hero_bg-tablet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -60,7 +60,7 @@
     screen and (min-resolution: 2dppx) {
     .hero {
       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../../img/hero/hero_bg-tablet@2x.jpg);
+        url(.././img/hero/hero_bg-tablet@2x.jpg);
     }
   }
 }
@@ -71,8 +71,17 @@
 
     border-top-color: var(--secondary-bg-color);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../../img/hero/hero_bg-desktop.jpg);
+      url(.././img/hero/hero_bg-desktop.jpg);
     background-size: cover;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      .hero {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(.././img/hero/hero_bg-desktop@2x.jpg);
+      }
+    }
   }
 
   .hero-title {
