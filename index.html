@@ -24,7 +24,7 @@
             <li class="site-nav-item"><a href="#" class="link">Контакты</a></li>
           </ul>
         </nav>
-        <button type="button" class="burger-btn">
+        <button type="button" class="burger-btn" data-menu-open>
           <svg class="burger-btn-icon">
             <use href="./img/icons/sprite.svg#icon-burger"></use>
           </svg>
@@ -51,7 +51,12 @@
 
       <!-- MOBILE MENU -->
 
-      <div class="mobile-menu is-menu-hidden">
+      <div class="mobile-menu" data-menu>
+        <button type="button" class="mobile-menu-close-btn" data-menu-close>
+          <svg class="mobile-menu-close-icon">
+            <use href="./img/icons/sprite.svg#close-button-mob"></use>
+          </svg>
+        </button>
         <ul class="mobile-menu-nav-list list">
           <li class="mobile-menu-nav-item">
             <a href="./index.html" class="mobile-nav-link link current-mobile-link">Студия</a>
@@ -609,7 +614,7 @@
 
     <!--  MODAL WINDOW -->
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-modal-button" data-modal-close>
           <svg class="close-button-icon" width="18px" height="18px">
@@ -664,7 +669,8 @@
           <button type="submit" class="main-button send-modal-btn">Отправить</button>
         </form>
       </div>
-    </div> -->
+    </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
